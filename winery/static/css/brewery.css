@@ -1,0 +1,396 @@
+.main {
+    background-image: url('../images/brewery.jpg');
+    height: 956px;
+    z-index: -1;
+}
+
+  .bg-steel {
+    background-color: #5f788a;
+  }
+
+  .inventory-header{
+    align-content: center;
+    width: 1;
+    text-align: center;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+  .navbar-nav {
+    align-content: center;
+  }
+
+  .pinot_noir {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.pinot-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 49px;
+    transition: transform 0.3s;
+}
+  
+  .pinot-i:hover {
+    transform: scale(50) translateX(20px)
+  }
+
+  .pinot-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.cabernet-sauvignon {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.cabernet-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 110px;
+    transition: transform 0.3s;
+}
+
+.cabernet-i:hover {
+    transform: scale(50) translateX(15px)
+}
+
+.cabernet-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.bobal {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.bobal-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 109px;
+    transition: transform 0.3s;
+}
+
+.bobal-i:hover {
+    transform: scale(50) translateX(12px)
+}
+
+.bobal-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.malbec {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.malbec-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 110px;
+    transition: transform 0.3s;
+}
+
+.malbec-i:hover {
+    transform: scale(50) translateX(10px)
+}
+
+.malbec-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.merlot {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.merlot-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 110px;
+    transition: transform 0.3s;
+}
+
+.merlot-i:hover {
+    transform: scale(50) translateX(7px)
+}
+
+.merlot-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.isabella {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.isabella-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 111px;
+    transition: transform 0.3s;
+}
+
+.isabella-i:hover {
+    transform: scale(50) translateX(4px)
+}
+
+.isabella-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.cinsaut {
+    width: 140px;
+    margin-top: -850px;
+}
+
+.cinsaut-i {
+    width: 30px;
+    margin-top: -1130px;
+    margin-left: 111px;
+    transition: transform 0.3s;
+}
+
+.cinsaut-i:hover {
+    transform: scale(50) translateX(1px)
+}
+
+.cinsaut-button {
+    position: fixed;
+    margin-top: -343px;
+    margin-left: -103px;
+}
+
+.chardonnay {
+    width: 30px;
+    margin-top: -850px;
+    margin-left: 1550px;
+}
+
+.chardonnay-i {
+    width: 25px;
+    margin-top: -1165px;
+    margin-left: 1553px;
+    transition: transform 0.3s;
+}
+
+.chardonnay-i:hover {
+    transform: scale(50) translateX(-10px)
+}
+
+.chardonnay-button {
+    position: fixed;
+    margin-top: -360px;
+    margin-left: -35px;
+}
+
+.sauvignon-blanc {
+    width: 30px;
+    margin-top: -897px;
+    margin-left: 1640px;
+}
+
+.sauvignon-i {
+    width: 25px;
+    margin-top: -1213px;
+    margin-left: 1643px;
+    transition: transform 0.3s;
+}
+
+.sauvignon-i:hover {
+    transform: scale(50) translateX(-15px)
+}
+
+.sauvignon-button {
+    position: fixed;
+    margin-top: -384px;
+    margin-left: -35px;
+}
+
+.riesling {
+    width: 30px;
+    margin-top: -947px;
+    margin-left: 1730px;
+}
+
+.riesling-i {
+    width: 25px;
+    margin-top: -1261px;
+    margin-left: 1733px;
+    transition: transform 0.3s;
+}
+
+.riesling-i:hover {
+    transform: scale(50) translateX(-17px)
+}
+
+.riesling-button {
+    position: fixed;
+    margin-top: -408px;
+    margin-left: -35px;
+}
+
+.muscat {
+    width: 30px;
+    margin-top: -996px;
+    margin-left: 1820px;
+}
+
+.muscat-i {
+    width: 25px;
+    margin-top: -1312px;
+    margin-left: 1823px;
+    transition: transform 0.3s;
+}
+
+.muscat-i:hover {
+    transform: scale(50) translateX(-18px)
+}
+
+.muscat-button {
+    position: fixed;
+    margin-top: -432px;
+    margin-left: -35px;
+}
+
+.pilsner {
+    width: 80px;
+    margin-top: -700px;
+    margin-left: 200px;
+}
+
+.pilsner-i {
+    width: 33px;
+    margin-top: -1020px;
+    margin-left: 225px;
+    transition: transform 0.3s;
+}
+
+.pilsner-i:hover {
+    transform: scale(40) translateX(18px) translateY(-5px)
+}
+
+.pilsner-button {
+    position: fixed;
+    margin-top: -270px;
+    margin-left: -65px;
+}
+
+.bock {
+    width: 80px;
+    margin-top: -700px;
+    margin-left: 200px;
+}
+
+.bock-i {
+    width: 33px;
+    margin-top: -1020px;
+    margin-left: 247px;
+    transition: transform 0.3s;
+}
+
+.bock-i:hover {
+    transform: scale(40) translateX(10px) translateY(-5px)
+}
+
+.bock-button {
+    position: fixed;
+    margin-top: -270px;
+    margin-left: -65px;
+}
+
+.marzen {
+    width: 80px;
+    margin-top: -700px;
+    margin-left: 200px;
+}
+
+.marzen-i {
+    width: 33px;
+    margin-top: -1020px;
+    margin-left: 247px;
+    transition: transform 0.3s;
+}
+
+.marzen-i:hover {
+    transform: scale(40) translateX(4px) translateY(-5px)
+}
+
+.marzen-button {
+    position: fixed;
+    margin-top: -270px;
+    margin-left: -65px;
+}
+
+.schwarzbier {
+    width: 80px;
+    margin-top: -700px;
+    margin-left: 200px;
+}
+
+.schwarzbier-i {
+    width: 33px;
+    margin-top: -1020px;
+    margin-left: 247px;
+    transition: transform 0.3s;
+}
+
+.schwarzbier-i:hover {
+    transform: scale(40) translateX(-3px) translateY(-5px)
+}
+
+.schwarzbier-button {
+    position: fixed;
+    margin-top: -270px;
+    margin-left: -65px;
+}
+
+.helles {
+    width: 80px;
+    margin-top: -700px;
+    margin-left: 200px;
+}
+
+.helles-i {
+    width: 33px;
+    margin-top: -1020px;
+    margin-left: 247px;
+    transition: transform 0.3s;
+}
+
+.helles-i:hover {
+    transform: scale(40) translateX(-10px) translateY(-5px)
+}
+
+.helles-button {
+    position: fixed;
+    margin-top: -270px;
+    margin-left: -58px;
+}
+
+body {
+    overflow: hidden;
+}
