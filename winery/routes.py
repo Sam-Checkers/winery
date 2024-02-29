@@ -3,7 +3,7 @@ from winery.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostFor
 from winery.models import User, Post, check_password_hash, db, contact_schema, contacts_schema
 from flask_login import login_user, current_user, logout_user, login_required 
 from winery import app
-
+from winery.wine_list import red_1, red_2, red_3, red_4, red_5, red_6, red_7, white_1, white_2, white_3, white_4, lager_1, lager_2, lager_3, lager_4, lager_5
 
 @app.route("/")
 @app.route("/brewery")
@@ -15,11 +15,9 @@ def home():
     posts=Post.query.all()
     return render_template('home.html', posts=posts)
 
-
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
-
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():

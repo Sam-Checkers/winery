@@ -3,7 +3,8 @@
 <div class="inventory-header">
   <h2>Your Shelf:</h2>
 </div>
-<img src="../static/images/7-column-diamond-bin-wine-rack-lg.jpg" alt="">
+<head>
+  <title>Wine Information</title>
 {% if current_user.is_authenticated %}  {# Assuming you are using Flask-Security or similar for user authentication #}
     {% for post in posts %}
         <article class="media content-section">

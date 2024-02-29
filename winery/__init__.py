@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, request, render_template, jsonify, json
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
 from winery.config import Config
 from winery.models import db as root_db, login_manager, ma
+from winery.models import db, Post
 
 app = Flask(__name__)
 CORS(app)

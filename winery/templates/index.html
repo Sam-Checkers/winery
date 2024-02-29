@@ -1,0 +1,34 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="createPostBtn">Create Post</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#createPostBtn').click(function() {
+                var postData = {
+                    "title": "Your title here",
+                    "content": "Your content here"
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "/create_post",
+                    contentType: "application/json",
+                    data: JSON.stringify(postData),
+                    success: function(response) {
+                        alert(response.message);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
