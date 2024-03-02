@@ -1,94 +1,18 @@
-red_1 = {
-    "Name": "Pinot Noir",
-    "Type": "Red",
-    "Region": "France"
-}
+from winery.models import Wine
 
-red_2 = {    
-    "Name": "Cabernet Sauvignon",
-    "Type": "Red",
-    "Region": "France/Spain"}
-
-red_3 = {
-    "Name": "Bobal",
-    "Type": "Red",
-    "Region": "Spain"
-}
-
-red_4 = {
-    "Name": "Malbec",
-    "Type": "Red",
-    "Region": "France"
-}
-
-red_5 = {
-    "Name": "Merlot",
-    "Type": "Red",
-    "Region": "France"
-}
-
-red_6 = {
-    "Name": "Isabella",
-    "Type": "Red",
-    "Region": "Italy"
-}
-
-red_7 = {
-    "Name": "Cinsaut",
-    "Type": "Red",
-    "Region": "France"
-}
-
-white_1 = {
-    "Name": "Chardonnay",
-    "Type": "White",
-    "Region": "Everywhere"
-}
-
-white_2 = {
-    "Name": "Sauvignon blanc",
-    "Type": "White",
-    "Region": "France"
-}
-
-white_3 = {
-    "Name": "Riesling",
-    "Type": "White",
-    "Region": "Germany"
-}
-
-white_4 = {
-    "Name": "Riesling",
-    "Type": "White",
-    "Region": "Italy/France/Australia"
-}
-
-lager_1 = {
-    "Name": "Pilsner",
-    "Type": "Lager",
-    "Region": "Bohemia"
-}
-
-lager_2 = {
-    "Name": "Bock",
-    "Type": "Lager",
-    "Region": "Germany"
-}
-
-lager_3 = {
-    "Name": "Märzen",
-    "Type": "Lager",
-    "Region": "Bavaria"
-}
-
-lager_4 = {
-    "Name": "Schwarzbier",
-    "Type": "Lager",
-    "Region": "Germany"
-}
-
-lager_5 = {
-    "Name": "Helles",
-    "Type": "Lager",
-    "Region": "The fires of Hades"
-}
+red_1 = Wine(name='Pinot Noir', type='Red', region='France')
+red_2 = Wine(name='Cabernet Sauvignon', type='Red', region='France/Spain')
+red_3 = Wine(name='Bobal', type='Red', region='Spain')
+red_4 = Wine(name='Malbec', type='Red', region='France')
+red_5 = Wine(name='Merlot', type='Red', region='France')
+red_6 = Wine(name='Isabella', type='Red', region='Italy')
+red_7 = Wine(name='Cinsaut', type='Red', region='France')
+white_1 = Wine(name='Chardonnay', type='White', region='France')
+white_2 = Wine(name='Sauvignon blanc', type='White', region='France')
+white_3 = Wine(name='Riesling', type='White', region='Germany')
+white_4 = Wine(name='Muscat', type='White', region='Italy/France/Australia/Spain')
+lager_1 = Wine(name='Pilsner', type='Lager', region='Bohemia')
+lager_2 = Wine(name='Bock', type='Lager', region='Germany')
+lager_3 = Wine(name='Märzen', type='Lager', region='Bavaria')
+lager_4 = Wine(name='Schwarzbier', type='Lager', region='Germany')
+lager_5 = Wine(name='Helles', type='Lager', region='The fires of Hades')

@@ -3,8 +3,12 @@
 <div class="inventory-header">
   <h2>Your Shelf:</h2>
 </div>
-<head>
-  <title>Wine Information</title>
+<body>
+  <div class="shelf-item">
+      <button class="remove-from-shelf" data-product-id="1">Remove</button>
+  </div>
+  <script src="app.js"></script>
+</body>
 {% if current_user.is_authenticated %}  {# Assuming you are using Flask-Security or similar for user authentication #}
     {% for post in posts %}
         <article class="media content-section">

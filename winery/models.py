@@ -46,7 +46,17 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
 
+class Wine(db.Model):
+    wine_id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    type = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    region = db.Column(db.Text, nullable=False)
 
+WineUser = db.Table('shelf_items',
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
+    db.Column('item_id', db.Integer, db.ForeignKey('item.id'), primary_key=True),
+    db.Column('quantity', db.Integer, nullable=False)
+)
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
@@ -56,7 +66,7 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
-    
+
 class ContactSchema(ma.Schema):
     class Meta:
         fields = ['id', 'title','content']

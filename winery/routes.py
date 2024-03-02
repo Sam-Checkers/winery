@@ -1,14 +1,33 @@
 from flask import render_template, url_for, flash, redirect, request, abort, jsonify
 from winery.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
-from winery.models import User, Post, check_password_hash, db, contact_schema, contacts_schema
+from winery.models import User, Post, check_password_hash, db, contact_schema, contacts_schema, Wine, WineUser
 from flask_login import login_user, current_user, logout_user, login_required 
 from winery import app
-from winery.wine_list import red_1, red_2, red_3, red_4, red_5, red_6, red_7, white_1, white_2, white_3, white_4, lager_1, lager_2, lager_3, lager_4, lager_5
 
 @app.route("/")
 @app.route("/brewery")
 def brewery():
     return render_template('brewery.html', title='brewery')
+
+def wines():
+    items = Wine.query.all()
+    return render_template('home.html', items=items)
+
+@app.route('/add_to_shelf', methods=['POST'])
+def add_to_shelf():
+    user_id = request.form['user_id']
+    item_id = request.form['item_id']
+
+    user = User.query.get(user_id)
+    item = Wine.query.get(item_id)
+    user.shelf.append(item)
+    db.session.commit()
+
+@app.route('/shelf/<int:user_id>')
+def shelf(user_id):
+    user = User.query.get(user_id)
+    shelf_items = user.shelf
+    return render_template('home.html', user=user, shelf_items=shelf_items)
 
 @app.route("/home")
 def home():
