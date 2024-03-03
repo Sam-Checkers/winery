@@ -29,6 +29,16 @@ def shelf(user_id):
     shelf_items = user.shelf
     return render_template('home.html', user=user, shelf_items=shelf_items)
 
+@app.route('/remove_from_cart', methods=['POST'])
+def remove_from_cart():
+    user_id = request.form['user_id']
+    item_id = request.form['item_id']
+
+    user = User.query.get(user_id)
+    item = Wine.query.get(item_id)
+    user.cart.remove(item)
+    db.session.commit()
+    
 @app.route("/home")
 def home():
     posts=Post.query.all()
