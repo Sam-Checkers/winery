@@ -17,6 +17,11 @@ def wines():
     items = Wine.query.all()
     return render_template('home.html', items=items)
 
+@app.route('/wines')
+def display_wines():
+    wines = Wine.query.all()
+    return render_template('wines.html', wines=wines)
+
 @app.route('/add_to_shelf', methods=['POST'])
 def add_to_shelf():
     user_id = request.form['user_id']
