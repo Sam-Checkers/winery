@@ -1,0 +1,488 @@
+.pinot_noir-container {
+    position: relative;
+    display: inline-block;
+}
+
+.pinot_noir {
+    width: 140px;
+    position: relative;
+}
+
+.pinot-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.pinot-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.pinot-button {
+    position: fixed;
+}
+
+.cabernet-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cabernet-sauvignon {
+    width: 140px;
+    position: relative;
+}
+
+.cabernet-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.cabernet-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.cabernet-button {
+    position: fixed;
+}
+
+.bobal-container {
+    position: relative;
+    display: inline-block;
+}
+
+.bobal {
+    width: 140px;
+    position: relative;
+}
+
+.bobal-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.bobal-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.bobal-button {
+    position: fixed;
+}
+
+.malbec-container {
+    position: relative;
+    display: inline-block;
+}
+
+.malbec {
+    width: 140px;
+    position: relative;
+}
+
+.malbec-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.malbec-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.malbec-button {
+    position: fixed;
+}
+
+.merlot-container {
+    position: relative;
+    display: inline-block;
+}
+
+.merlot {
+    width: 140px;
+    position: relative;
+}
+
+.merlot-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.merlot-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.merlot-button {
+    position: fixed;
+}
+
+.isabella-container {
+    position: relative;
+    display: inline-block;
+}
+
+.isabella {
+    width: 140px;
+    position: relative;
+}
+
+.isabella-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.isabella-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.isabella-button {
+    position: fixed;
+}
+
+.cinsaut-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cinsaut {
+    width: 140px;
+    position: relative;
+}
+
+.cinsaut-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.cinsaut-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.cinsaut-button {
+    position: fixed;
+}
+
+.chardonnay-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.chardonnay {
+    width: 30px;
+    position: relative;
+}
+
+.chardonnay-i {
+    width: 25px;
+    position: absolute;
+    top: 30%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.chardonnay-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.chardonnay-button {
+    position: fixed;
+}
+
+.sauvignon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.sauvignon-blanc {
+    width: 30px;
+    position: relative;
+}
+
+.sauvignon-i {
+    width: 25px;
+    position: absolute;
+    top: 30%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.sauvignon-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.sauvignon-button {
+    position: fixed;
+}
+
+.riesling-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.riesling {
+    width: 30px;
+    position: relative;
+}
+
+.riesling-i {
+    width: 25px;
+    position: absolute;
+    top: 30%;
+    left: 46.5%;
+    transform: translate(-50%, -50%);
+}
+
+.riesling-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.riesling-button {
+    position: fixed;
+}
+
+.muscat-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.muscat {
+    width: 30px;
+    position: relative;
+}
+
+.muscat-i {
+    width: 25px;
+    position: absolute;
+    top: 30%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.muscat-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.muscat-button {
+    position: fixed;
+}
+
+.pilsner-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.pilsner {
+    width: 80px;
+    position: relative;
+}
+
+.pilsner-i {
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.pilsner-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(35);
+    z-index: 2;
+  }
+
+.pilsner-button {
+    position: fixed;
+}
+
+.bock-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.bock {
+    width: 80px;
+    position: relative;
+}
+
+.bock-i {
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.bock-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(35);
+    z-index: 2;
+  }
+
+.bock-button {
+    position: fixed;
+}
+
+.marzen-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.marzen {
+    width: 80px;
+    position: relative;
+}
+
+.marzen-i {
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.marzen-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(35);
+    z-index: 2;
+  }
+
+.marzen-button {
+    position: fixed;
+}
+
+.schwarzbier-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.schwarzbier {
+    width: 80px;
+    position: relative;
+}
+
+.schwarzbier-i {
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.schwarzbier-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(35);
+    z-index: 2;
+  }
+
+.schwarzbier-button {
+    position: fixed;
+}
+
+.helles-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.helles {
+    width: 80px;
+    position: relative;
+}
+
+.helles-i {
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.helles-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(35);
+    z-index: 2;
+  }
+
+.helles-button {
+    position: fixed;
+}

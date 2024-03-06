@@ -25,7 +25,6 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(120), nullable=False)
     g_auth_verify = db.Column(db.Boolean, default = False)
     token = db.Column(db.String, default = '', unique = True )
-    posts = db.relationship('Post', backref='author', lazy=True)
 
     def __init__(self, first_name='', last_name='', username='', email='', password='', g_auth_verify=False, token=''):
         self.first_name = first_name
@@ -49,23 +48,13 @@ class User(db.Model, UserMixin):
 class Wine(db.Model):
     wine_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    type = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    type = db.Column(db.String(100), nullable=False)
     region = db.Column(db.Text, nullable=False)
 
 WineUser = db.Table('shelf_items',
     db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
-    db.Column('item_id', db.Integer, db.ForeignKey('item.id'), primary_key=True),
-    db.Column('quantity', db.Integer, nullable=False)
+    db.Column('wine_id', db.Integer, db.ForeignKey('wine.wine_id'), primary_key=True),
 )
-class Post(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    content = db.Column(db.Text, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-
-    def __repr__(self):
-        return f"Post('{self.title}', '{self.date_posted}')"
 
 class ContactSchema(ma.Schema):
     class Meta:

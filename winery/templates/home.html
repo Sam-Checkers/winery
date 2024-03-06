@@ -9,7 +9,7 @@
   </div>
   <script src="app.js"></script>
 </body>
-{% if current_user.is_authenticated %}  {# Assuming you are using Flask-Security or similar for user authentication #}
+{% if current_user.is_authenticated %}
     {% for post in posts %}
         <article class="media content-section">
           <div class="media-body">
@@ -23,6 +23,6 @@
         </article>
     {% endfor %}
 {% else %}
-    <p>Please log in to view the inventory.</p>
+    <p>Please log in to view your shelf.</p>
 {% endif %}
 {% endblock content %}
