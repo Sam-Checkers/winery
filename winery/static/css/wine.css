@@ -1,18 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-body {
-    background-image: url('../images/brewery.jpg');
-    background-attachment: fixed;
-    height: 100vh;
-    overflow: hidden;
-  }
-
   .red-row {
-    padding-top: 470px;
+    padding-top: 300px;
   }
 
   .bg-steel {
@@ -42,7 +29,7 @@ body {
   }
 
 
-  .pinot_noir-container {
+.pinot_noir-container {
     position: relative;
     display: inline-block;
 }
@@ -73,7 +60,6 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-65%);
-    z-index: 2;
 }
 
 .chardonnay-container {
@@ -108,13 +94,12 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
 }
 
 .pilsner-container {
     position: relative;
     display: inline-block;
-    margin-left: 230px;
+    margin-left: 23px;
 }
 
 .pilsner {
@@ -143,26 +128,4 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-45%);
-}
-
-.red-row {
-    display: flex;
-    align-items: flex-start;
-    width: 10000px;
-}
-
-.white-row {
-    display: flex;
-    align-items: flex-start;
-    padding-left: 450px;
-    padding-top: 70px;
-  }
-
-  .lager-row {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 200px;
-    padding-left: -500px;
-    position: absolute;
-    z-index: 1;
 }

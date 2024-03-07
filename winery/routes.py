@@ -7,7 +7,8 @@ from winery import app
 @app.route("/")
 @app.route("/brewery")
 def brewery():
-    return render_template('brewery.html', title='brewery')
+    wines = Wine.query.all()
+    return render_template('brewery.html', title='brewery', wines=wines)
 
 @app.route("/containers")
 def containers():

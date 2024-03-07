@@ -7,7 +7,7 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="../static/css/brewery.css">
+<link rel="stylesheet" href="../static/css/containers.css">
 <title>Home</title>
 </head>
 <body>
@@ -35,9 +35,39 @@
           </div>
         </nav>
       </header>
-<div class="main"></div>
 <section class="red-row">
-
+  <ul>
+    {% for wine in wines if wine.type == 'Red' %}
+    <div class="pinot_noir-container">
+        <img class="pinot_noir" src="../static/images/black_bottle.png" alt="">
+        <img class="pinot-i" src="../static/images/{{wine.name.lower()}}-i.png" alt="">
+        <button class="pinot-button">Add</button>
+    </div>
+    {% endfor %}
+</ul>
+<section class="white-row">
+  <ul>
+    {% for wine in wines if wine.type == 'White' %}
+    <div class="chardonnay-container">
+        <img class="chardonnay" src="../static/images\white-glass.png.png" alt="">
+        <img class="chardonnay-i" src="../static/images/{{wine.name.lower()}}-i.png" alt="">
+        <button class="chardonnay-button">Add</button>
+    </div>
+    </div>
+    {% endfor %}
+</ul>
+</section>
+<section class="lager-row">
+  <ul>
+    {% for wine in wines if wine.type == 'Lager' %}
+    <div class="pilsner-container">
+        <img class="pilsner" src="../static/images\beer.png.png" alt="">
+        <img class="pilsner-i" src="../static/images\{{wine.name.lower()}}-i.png" alt="">
+        <button class="pilsner-button">Add</button>
+    </div>
+    {% endfor %}
+</ul>
+</section>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
