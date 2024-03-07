@@ -51,6 +51,7 @@
     <div class="chardonnay-container">
         <img class="chardonnay" src="../static/images\white-glass.png.png" alt="">
         <img class="chardonnay-i" src="../static/images/{{wine.name.lower()}}-i.png" alt="">
+        <a href="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}">Add to inventory</a>
         <button class="chardonnay-button">Add</button>
     </div>
     </div>

@@ -24,6 +24,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(120), nullable=False)
     g_auth_verify = db.Column(db.Boolean, default = False)
     token = db.Column(db.String, default = '', unique = True )
+    wines = db.relationship('Wine', secondary=WineUser, backref=db.backref('users', lazy='dynamic'))
 
     def __init__(self, first_name='', last_name='', username='', email='', password='', g_auth_verify=False, token=''):
         self.first_name = first_name
@@ -50,7 +51,7 @@ class Wine(db.Model):
     type = db.Column(db.String(100), nullable=False)
     region = db.Column(db.Text, nullable=False)
 
-WineUser = db.Table('shelf_items',
+WineUser = db.Table('wine_users',
     db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
     db.Column('wine_id', db.Integer, db.ForeignKey('wine.wine_id'), primary_key=True),
 )

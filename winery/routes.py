@@ -23,15 +23,20 @@ def display_wines():
     wines = Wine.query.all()
     return render_template('wines.html', wines=wines)
 
-@app.route('/add_to_shelf', methods=['POST'])
-def add_to_shelf():
-    user_id = request.form['user_id']
-    item_id = request.form['item_id']
+@app.route('/add_to_shelf/<int:wine_id>')
+@login_required
+def add_to_shelf(wine_id):
+    user_id = current_user.id
+    item_id = wine_id
 
     user = User.query.get(user_id)
     item = Wine.query.get(item_id)
-    user.shelf.append(item)
+    user.wines.append(item)
+    # user.shelf.append(item)
+    # WineUser.wine_id.append(wine_id)
     db.session.commit()
+    print('Success!')
+    return redirect('home.html')
 
 @app.route('/shelf/<int:user_id>')
 def shelf(user_id):
