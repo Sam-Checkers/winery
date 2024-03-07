@@ -28,7 +28,7 @@
     position: fixed;
 }
 
-.cabernet-container {
+.cabernet-sauvignon-container {
     position: relative;
     display: inline-block;
 }
@@ -239,7 +239,7 @@
     position: fixed;
 }
 
-.sauvignon-container {
+.sauvignon-blanc-container {
     position: relative;
     display: inline-block;
     margin-left: 50px;
@@ -316,7 +316,7 @@
     width: 25px;
     position: absolute;
     top: 30%;
-    left: 47%;
+    left: 49%;
     transform: translate(-50%, -50%);
 }
 
