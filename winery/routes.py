@@ -32,8 +32,6 @@ def add_to_shelf(wine_id):
     user = User.query.get(user_id)
     item = Wine.query.get(item_id)
     user.wines.append(item)
-    # user.shelf.append(item)
-    # WineUser.wine_id.append(wine_id)
     db.session.commit()
     print('Success!')
     return redirect('home.html')

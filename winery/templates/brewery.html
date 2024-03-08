@@ -41,7 +41,10 @@
     <div class="pinot_noir-container">
         <img class="pinot_noir" src="../static/images/black_bottle.png" alt="">
         <img class="pinot-i" src="../static/images/{{wine.name.lower()}}-i.png" alt="">
-        <button class="pinot-button">Add</button>
+        <form action="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}" method="get">
+          <input type="hidden" name="wine_id" value="{{ wine.id }}">
+          <button type="submit" class="pinot-button">Add</button>
+        </form>
     </div>
     {% endfor %}
 </ul>
@@ -51,8 +54,10 @@
     <div class="chardonnay-container">
         <img class="chardonnay" src="../static/images\white-glass.png.png" alt="">
         <img class="chardonnay-i" src="../static/images/{{wine.name.lower()}}-i.png" alt="">
-        <a href="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}">Add to inventory</a>
-        <button class="chardonnay-button">Add</button>
+        <form action="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}" method="get">
+          <input type="hidden" name="wine_id" value="{{ wine.id }}">
+          <button type="submit" class="chardonnay-button">Add</button>
+        </form>
     </div>
     </div>
     {% endfor %}
@@ -64,7 +69,10 @@
     <div class="pilsner-container">
         <img class="pilsner" src="../static/images\beer.png.png" alt="">
         <img class="pilsner-i" src="../static/images\{{wine.name.lower()}}-i.png" alt="">
-        <button class="pilsner-button">Add</button>
+        <form action="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}" method="get">
+          <input type="hidden" name="wine_id" value="{{ wine.id }}">
+          <button type="submit" class="pilsner-button">Add</button>
+        </form>
     </div>
     {% endfor %}
 </ul>
