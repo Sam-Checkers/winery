@@ -14,6 +14,11 @@ ma = Marshmallow()
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+WineUser = db.Table('wine_users',
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
+    db.Column('wine_id', db.Integer, db.ForeignKey('wine.wine_id'), primary_key=True),
+)
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(150), nullable=True, default='')
@@ -48,11 +53,6 @@ class Wine(db.Model):
     name = db.Column(db.String(100), nullable=False)
     type = db.Column(db.String(100), nullable=False)
     region = db.Column(db.Text, nullable=False)
-
-WineUser = db.Table('wine_users',
-    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
-    db.Column('wine_id', db.Integer, db.ForeignKey('wine.wine_id'), primary_key=True),
-)
 
 class ContactSchema(ma.Schema):
     class Meta:
