@@ -2,28 +2,24 @@
 {% block content %}
 <div class="inventory-header">
   <h2>Your Shelf:</h2>
-    <ul>
-      {% for Wine in Wine %}
-          <li>{{ Wine.name }} - {{ Wine.type }} - {{ Wine.region }}</li>
-      {% endfor %}
-  </ul>
-</div>
-<body>
-</body>
-{% if current_user.is_authenticated %}
-    {% for post in posts %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.author.username }}</a>
-              <small class="text-muted">{{ post.date_posted.strftime('%m-%d-%Y') }}</small>
+  {% if current_user.is_authenticated %}
+  <ul>
+    {% for wine in current_user.wines %}
+        <li class="wine-item">
+            <div>
+                {{ wine.name }} - {{ wine.type }} - {{ wine.region }}
             </div>
-            <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
-          </div>
-        </article>
+            <div>
+                <form action="{{ url_for('remove_from_shelf', wine_id=wine.wine_id) }}" method="get">
+                    <input type="hidden" name="wine_id" value="{{ wine.id }}">
+                    <button type="submit">Remove</button>
+                </form>
+            </div>
+        </li>
     {% endfor %}
-{% else %}
+  </ul>
+  {% else %}
     <p>Please log in to view your shelf.</p>
-{% endif %}
+  {% endif %}
+</div>
 {% endblock content %}

@@ -49,14 +49,14 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
 class Wine(db.Model):
-    wine_id = db.Column(db.Integer, primary_key=True)
+    wine_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100), nullable=False)
     type = db.Column(db.String(100), nullable=False)
     region = db.Column(db.Text, nullable=False)
 
-class ContactSchema(ma.Schema):
+class WineSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'title','content']
+        fields = ['wine_id', 'name', 'type','region']
 
-contact_schema = ContactSchema()
-contacts_schema = ContactSchema(many=True)
+wine_schema = WineSchema()
+wine_schema = WineSchema(many=True)

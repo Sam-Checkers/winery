@@ -58,6 +58,7 @@ body {
     top: 50%;
     left: 46%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .pinot-i:hover {
@@ -65,7 +66,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(50);
-    z-index: 2;
+    z-index: 3;
   }
 
   .pinot-button {
@@ -93,6 +94,7 @@ body {
     top: 30%;
     left: 45.5%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .chardonnay-i:hover {
@@ -100,7 +102,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(50);
-    z-index: 2;
+    z-index: 3;
   }
 
 .chardonnay-button {
@@ -128,6 +130,7 @@ body {
     top: 30%;
     left: 53%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .pilsner-i:hover {
@@ -135,7 +138,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(35);
-    z-index: 2;
+    z-index: 3;
   }
 
 .pilsner-button {
@@ -164,7 +167,6 @@ body {
     padding-top: 200px;
     padding-left: -500px;
     position: absolute;
-    z-index: 1;
 }
 
 .table-button {

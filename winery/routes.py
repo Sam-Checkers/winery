@@ -1,8 +1,9 @@
 from flask import render_template, url_for, flash, redirect, request, abort, jsonify
 from winery.forms import RegistrationForm, LoginForm, UpdateAccountForm
-from winery.models import User, check_password_hash, db, contact_schema, contacts_schema, Wine, WineUser
+from winery.models import User, check_password_hash, db, wine_schema, wine_schema, Wine, WineUser
 from flask_login import login_user, current_user, logout_user, login_required 
 from winery import app
+from sqlalchemy.exc import IntegrityError
 
 @app.route("/")
 @app.route("/brewery")
@@ -28,13 +29,15 @@ def display_wines():
 def add_to_shelf(wine_id):
     user_id = current_user.id
     item_id = wine_id
-
-    user = User.query.get(user_id)
-    item = Wine.query.get(item_id)
-    user.wines.append(item)
-    db.session.commit()
-    print('Success!')
-    return redirect('home.html')
+    try:
+        user = User.query.get(user_id)
+        item = Wine.query.get(item_id)
+        user.wines.append(item)
+        db.session.commit()
+        print('Success!')
+    except:
+        print('Already on Your Shelf')
+    return redirect(url_for('brewery'))
 
 @app.route('/shelf/<int:user_id>')
 def shelf(user_id):
@@ -42,15 +45,16 @@ def shelf(user_id):
     shelf_items = user.shelf
     return render_template('home.html', user=user, shelf_items=shelf_items)
 
-@app.route('/remove_from_shelf', methods=['POST'])
-def remove_from_cart():
-    user_id = request.form['user_id']
-    item_id = request.form['item_id']
+@app.route('/remove_from_shelf/<int:wine_id>')
+def remove_from_shelf(wine_id):
+    user_id = current_user.id
+    item_id = wine_id
 
     user = User.query.get(user_id)
     item = Wine.query.get(item_id)
-    user.cart.remove(item)
+    user.wines.remove(item)
     db.session.commit()
+    return redirect(url_for('home'))
     
 @app.route("/home")
 def home():
@@ -119,3 +123,85 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
     return render_template('account.html', title='Account', form=form)
+
+@app.route("/user_info/<int:user_id>", methods=['GET'])
+def get_user_info(user_id):
+    user = User.query.get(user_id)
+    if user:
+        user_info = {
+            'id': user.id,
+            'username': user.username,
+            'email': user.email,
+            'first_name': user.first_name,
+            'last_name': user.last_name
+        }
+        return jsonify(user_info), 200
+    else:
+        return jsonify({'error': 'User not found'}), 404
+    
+@app.route("/get_all_wines", methods=['GET'])
+def get_all_wines():
+    wines = Wine.query.all()
+    wine_list = []
+    for wine in wines:
+        wine_info = {
+            'wine_id': wine.wine_id,
+            'name': wine.name,
+            'type': wine.type,
+            'region': wine.region
+        }
+        wine_list.append(wine_info)
+    return jsonify(wine_list), 200
+
+@app.route("/wine/<int:wine_id>", methods=['GET'])
+def get_wine(wine_id):
+    wine = Wine.query.get(wine_id)
+    if wine:
+        wine_info = {
+            'wine_id': wine.wine_id,
+            'name': wine.name,
+            'type': wine.type,
+            'region': wine.region
+        }
+        return jsonify(wine_info), 200
+    else:
+        return jsonify({'error': 'Wine not found'}), 404
+    
+@app.route("/update_wine/<int:wine_id>", methods=['PUT'])
+def update_wine(wine_id):
+    wine = Wine.query.get(wine_id)
+    if wine:
+        data = request.get_json()
+        wine.name = data.get('name', wine.name)
+        wine.type = data.get('type', wine.type)
+        wine.region = data.get('region', wine.region)
+        db.session.commit()
+        return jsonify({'message': 'Wine updated successfully'}), 200
+    else:
+        return jsonify({'error': 'Wine not found'}), 404
+
+@app.route("/add_wine", methods=['POST'])
+def add_wine():
+    data = request.get_json()
+    new_wine = Wine(
+        name=data['name'],
+        type=data['type'],
+        region=data['region']
+    )
+    try:
+        db.session.add(new_wine)
+        db.session.commit()
+        return jsonify({'message': 'Wine added successfully'}), 201
+    except IntegrityError as e:
+        db.session.rollback()
+        return jsonify({'error': 'Failed to add wine. IntegrityError: {}'.format(str(e))}), 400
+
+@app.route("/delete_wine/<int:wine_id>", methods=['DELETE'])
+def delete_wine(wine_id):
+    wine = Wine.query.get(wine_id)
+    if wine:
+        db.session.delete(wine)
+        db.session.commit()
+        return jsonify({'message': 'Wine deleted successfully'}), 200
+    else:
+        return jsonify({'error': 'Wine not found'}), 404
