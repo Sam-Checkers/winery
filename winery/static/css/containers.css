@@ -1,174 +1,180 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-image: url('../images/brewery.jpg');
-    background-attachment: fixed;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .red-row {
-    padding-top: 470px;
-  }
-
-  .bg-steel {
-    background-color: #5f788a;
-  }
-
-  .inventory-header{
-    align-content: center;
-    width: 1;
-    text-align: center;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-
-  .navbar-nav {
-    align-content: center;
-  }
-
-
-  .pinot_noir-container {
-    position: relative;
-    display: inline-block;
-}
-
-.pinot_noir {
-    width: 140px;
-    position: relative;
-}
-
-.pinot-i {
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    left: 46%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.pinot-i:hover {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(50);
-    z-index: 3;
-  }
-
-  .pinot-button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-65%);
-    z-index: 2;
-}
-
-.chardonnay-container {
-    position: relative;
-    display: inline-block;
-    margin-left: 50px;
-}
-
-.chardonnay {
-    width: 30px;
-    position: relative;
-}
-
-.chardonnay-i {
-    width: 25px;
-    position: absolute;
-    top: 30%;
-    left: 45.5%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.chardonnay-i:hover {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(50);
-    z-index: 3;
-  }
-
-.chardonnay-button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.pilsner-container {
-    position: relative;
-    display: inline-block;
-    margin-left: 230px;
-}
-
-.pilsner {
-    width: 80px;
-    position: relative;
-}
-
-.pilsner-i {
-    width: 40px;
-    position: absolute;
-    top: 30%;
-    left: 53%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.pilsner-i:hover {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(35);
-    z-index: 3;
-  }
-
-.pilsner-button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-45%);
+  background-image: url('../images/brewery.jpg');
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .red-row {
-    display: flex;
-    align-items: flex-start;
-    width: 10000px;
+  padding-top: 470px;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.inventory-header{
+  align-content: center;
+  width: 1;
+  text-align: center;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.navbar-nav {
+  align-content: center;
+}
+
+
+.pinot_noir-container {
+  position: relative;
+  display: inline-block;
+}
+
+.pinot_noir {
+  width: 140px;
+  position: relative;
+}
+
+.pinot-i {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.pinot-i:hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(50);
+  z-index: 3;
+}
+
+.pinot-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-65%);
+  z-index: 2;
+}
+
+.chardonnay-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.chardonnay {
+  width: 30px;
+  position: relative;
+}
+
+.chardonnay-i {
+  width: 25px;
+  position: absolute;
+  top: 30%;
+  left: 45.5%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.chardonnay-i:hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(50);
+  z-index: 3;
+}
+
+.chardonnay-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.pilsner-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 230px;
+}
+
+.pilsner {
+  width: 80px;
+  position: relative;
+}
+
+.pilsner-i {
+  width: 40px;
+  position: absolute;
+  top: 30%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.pilsner-i:hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(35);
+  z-index: 3;
+}
+
+.pilsner-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-45%);
+}
+
+.red-row {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  max-width: 90%;
+  white-space: nowrap;
+  padding-top: 650px;
 }
 
 .white-row {
-    display: flex;
-    align-items: flex-start;
-    padding-left: 450px;
-    padding-top: 70px;
-  }
+  display: flex;
+  align-items: flex-start;
+  padding-left: 450px;
+  padding-top: 70px;
+}
 
-  .lager-row {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 200px;
-    padding-left: -500px;
-    position: absolute;
+.lager-row {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 500px;
+  padding-left: -500px;
+  position: absolute;
+  max-width: 50%;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .table-button {
-    z-index: 4;
+  z-index: 4;
 }

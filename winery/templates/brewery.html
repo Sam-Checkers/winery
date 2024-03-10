@@ -36,6 +36,20 @@
           </div>
         </nav>
       </header>
+<section class="lager-row">
+        <ul>
+          {% for wine in wines if wine.type == 'Lager' %}
+          <div class="pilsner-container">
+              <img class="pilsner" src="../static/images\beer.png.png" alt="">
+              <img class="pilsner-i" src="../static/images\{{wine.name.lower()}}-i.png" alt="">
+              <form action="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}" method="get">
+                <input type="hidden" name="wine_id" value="{{ wine.id }}">
+                <button type="submit" class="pilsner-button">Add</button>
+              </form>
+          </div>
+          {% endfor %}
+      </ul>
+</section>
 <section class="red-row">
   <ul>
     {% for wine in wines if wine.type == 'Red' %}
@@ -60,20 +74,6 @@
           <button type="submit" class="chardonnay-button">Add</button>
         </form>
     </div>
-    </div>
-    {% endfor %}
-</ul>
-</section>
-<section class="lager-row">
-  <ul>
-    {% for wine in wines if wine.type == 'Lager' %}
-    <div class="pilsner-container">
-        <img class="pilsner" src="../static/images\beer.png.png" alt="">
-        <img class="pilsner-i" src="../static/images\{{wine.name.lower()}}-i.png" alt="">
-        <form action="{{ url_for('add_to_shelf', wine_id=wine.wine_id) }}" method="get">
-          <input type="hidden" name="wine_id" value="{{ wine.id }}">
-          <button type="submit" class="pilsner-button">Add</button>
-        </form>
     </div>
     {% endfor %}
 </ul>
