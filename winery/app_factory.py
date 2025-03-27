@@ -1,27 +1,26 @@
 from flask import Flask
+from flask_migrate import Migrate
 
-def create_app(config_class=None):
+def create_app(config_object=None):
     app = Flask(__name__)
     
-    # Load configuration
-    if config_class is None:
-        # Import config if not provided
+    # Configure app
+    if config_object is None:
         from config import Config
-        config_class = Config
+        config_object = Config
     
-    app.config.from_object(config_class)
+    app.config.from_object(config_object)
     
-    # Initialize extensions with app
-    from winery.extensions import db, login_manager, ma, bcrypt, migrate, CORS
-    CORS(app)
+    # Initialize extensions
+    from extensions import db, login_manager, ma, bcrypt, cors
     db.init_app(app)
     login_manager.init_app(app)
     ma.init_app(app)
     bcrypt.init_app(app)
-    migrate.init_app(app, db)
+    cors.init_app(app)
     
-    # Register routes
-    from winery.routes import register_routes
-    register_routes(app)
+    # Initialize migrate explicitly
+    migrate = Migrate(app, db)
+    
     
     return app
