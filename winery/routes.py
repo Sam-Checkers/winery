@@ -5,6 +5,10 @@ from flask_login import login_user, current_user, logout_user, login_required
 from winery import app
 from sqlalchemy.exc import IntegrityError
 from winery import app, db
+from flask import request, render_template, jsonify, json
+from winery import db, login_manager, ma, bcrypt, create_app
+
+app = create_app()
 
 @app.route("/")
 @app.route("/brewery")
