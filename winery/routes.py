@@ -4,6 +4,7 @@ from winery.models import User, check_password_hash, db, wine_schema, wine_schem
 from flask_login import login_user, current_user, logout_user, login_required 
 from winery import app
 from sqlalchemy.exc import IntegrityError
+from winery import app, db
 
 @app.route("/")
 @app.route("/brewery")

@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import uuid
 from werkzeug.security import generate_password_hash, check_password_hash
+from winery import db, login_manager, ma
 
 login_manager = LoginManager()
 db=SQLAlchemy()
